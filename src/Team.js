@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react'
 import './Team.css';
 import { Box, Button, Image, Heading, Text, Flex, Card } from 'rebass';
 import { Tiles } from '@rebass/layout';
+
 import avatar from './resources/avatar_1.png';
 import avatar2 from './resources/avatar_1_2.png';
 import avatar3 from './resources/avatar_2.png';
@@ -16,6 +17,8 @@ import avatar11 from './resources/avatar_6_1.png';
 import avatar12 from './resources/avatar_6_2.png';
 import avatar13 from './resources/avatar_7_1.png';
 import avatar14 from './resources/avatar_7_2.png';
+import avatar15 from './resources/avatar_8_1.png';
+import avatar16 from './resources/avatar_8_2.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -35,6 +38,7 @@ const Team = () => {
   const h1Ref = useRef(null)
   const isVisible = useOnScreen(h1Ref);
   const [display, setDisplay] = useState(false);
+  // const [show, setShow] = useState(false);
   // const headRef = useRef()
 
   useEffect(() => {
@@ -80,6 +84,7 @@ const Team = () => {
     );
   }
 
+
   return (
     <Flex width={1} flexDirection='column' style={{ margin: '0 auto', alignItems: 'center', minHeight: '100%' }}>
       <Text ref={h1Ref} style={{ top: 0, userSelect: 'none', cursor: 'pointer' }}
@@ -107,9 +112,10 @@ const Team = () => {
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
         <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
-          {personCard(avatar13, avatar14, "Zayn", "UX", "", false)}
-          {personCard(avatar11, avatar12, "KK", "UX", "", false)}
-          {personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}
+          {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
+          {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
+          //{show?<div>{personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")}</div>:null}
+          {personCard(avatar15,avatar16, "Zena","Intern","",false)}
         </Tiles>
       </Flex>
     </Flex>
