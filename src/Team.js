@@ -19,6 +19,8 @@ import avatar13 from './resources/avatar_7_1.png';
 import avatar14 from './resources/avatar_7_2.png';
 import avatar15 from './resources/avatar_8_1.png';
 import avatar16 from './resources/avatar_8_2.png';
+import avatar17 from './resources/avatar_9_1.png';
+import avatar18 from './resources/avatar_9_2.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -84,7 +86,7 @@ const Team = () => {
 
 
   return (
-    <Flex width={1} flexDirection='column' style={{ margin: '0 auto', alignItems: 'center', minHeight: '100%' }}>
+    <Flex width={1} flexDirection='column' style={{ margin: '0 auto', alignItems: 'center', minHeight: '100%', marginBottom: '50px'}}>
       <Text ref={h1Ref} style={{ top: 0, userSelect: 'none', cursor: 'pointer' }}
         fontFamily={'Bungee'} pt={30}
         fontSize={[2, 4, 6]} >Our team</Text>
@@ -109,11 +111,11 @@ const Team = () => {
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
-        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
+          {personCard(avatar17, avatar18, "Unicar", "", "https://github.com/unicar9")}
           {personCard(avatar15,avatar16, "Zena","Intern","",false)}
-          {/* {personCard(avatar5, avatar6, "Luka", "Senior iOS Developer", "https://github.com/honeyluka")} */}
         </Tiles>
       </Flex>
     </Flex>
