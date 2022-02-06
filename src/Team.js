@@ -65,8 +65,7 @@ const Team = () => {
         </div>
         <Heading color="white" fontFamily="Bungee" fontSize={[1, 3, 4]}  >{name} </Heading>
         <Heading color="white" fontFamily="Ubuntu" fontSize={[1, 2, 3]} >{position} </Heading>
-        {/* <Heading color="white" fontFamily="Bungee" >Blablablablablablablablablablablablablablablablablabl </Heading> */}
-        { showGithub? socialLink(faGithub, github) : <dev />}
+        { showGithub? socialLink(faGithub, github) : <dev style={{height: '46.25px', width: '62px'}} />}
       </Flex >
     );
   }
@@ -105,7 +104,7 @@ const Team = () => {
           <br />
           Our goal is bring more people to the <span className="half_background">crypto wonderland</span>.
         </Text>
-        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none', marginBottom:'30px' }}>
           {personCard(avatar, avatar2, "Hao", "Founder & Developer", "https://github.com/lmcmz")}
           {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
