@@ -114,7 +114,7 @@ const Team = () => {
         <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
-          {personCard(avatar17, avatar18, "Unicar", "", "https://github.com/unicar9")}
+          {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")}
           {personCard(avatar15,avatar16, "Zena","Intern","",false)}
         </Tiles>
       </Flex>
