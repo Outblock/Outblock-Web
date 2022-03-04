@@ -110,10 +110,10 @@ const Team = () => {
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
-        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
-          {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")}
+          {/* {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")} */}
           {personCard(avatar15,avatar16, "Zena","Intern","",false)}
         </Tiles>
       </Flex>

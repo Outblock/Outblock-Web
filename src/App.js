@@ -70,7 +70,7 @@ const App = () => {
           }}>
 
             <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
-              {socialLink(faTwitter, 'https://twitter.com/realoutblock')}
+              {socialLink(faTwitter, 'https://twitter.com/0xOutblock')}
               {socialLink(faGithub, 'https://github.com/outblock')}
               {socialLink(faDiscord, 'https://discord.gg/DtZkFTay2U')}
             </Tiles>
