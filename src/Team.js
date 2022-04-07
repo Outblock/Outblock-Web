@@ -19,8 +19,8 @@ import avatar13 from './resources/avatar_7_1.png';
 import avatar14 from './resources/avatar_7_2.png';
 import avatar15 from './resources/avatar_8_1.png';
 import avatar16 from './resources/avatar_8_2.png';
-import avatar17 from './resources/avatar_9_1.png';
-import avatar18 from './resources/avatar_9_2.png';
+import avatar17 from './resources/avatar_10_1.png';
+import avatar18 from './resources/avatar_10_2.png';
 import useOnScreen from './Util/UseOnScreen.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter, faDiscord } from '@fortawesome/free-brands-svg-icons'
@@ -110,11 +110,12 @@ const Team = () => {
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
-        <Tiles columns={[1, null, 3]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
           {/* {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")} */}
           {personCard(avatar15,avatar16, "Zena","Intern","",false)}
+          {personCard(avatar17,avatar18, "Jenny","Marketing","",false)}
         </Tiles>
       </Flex>
     </Flex>
