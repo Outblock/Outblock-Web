@@ -104,13 +104,13 @@ const Team = () => {
           <br />
           Our goal is bring more people to the <span className="half_background">crypto wonderland</span>.
         </Text>
-        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none', marginBottom:'30px' }}>
+        <Tiles columns={[1, 2, 4]} sx={{ justifyItems: 'center', userSelect: 'none', marginBottom:'30px' }}>
           {personCard(avatar, avatar2, "Hao", "Founder & Developer", "https://github.com/lmcmz")}
           {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
           {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
           {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
         </Tiles>
-        <Tiles columns={[1, null, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
+        <Tiles columns={[1, 2, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
           {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
           {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
           {/* {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")} */}
