@@ -82,7 +82,7 @@ const Footer = () => {
         fontWeight: 'bold',
         fontSize: '1.9vmin',
         textAlign: 'center',
-      }}> Copyright © Outblock 2021 </Text>
+      }}> Copyright © Outblock 2022 </Text>
       <Text sx={{
         color: '#B6B6B6',
         fontFamily: "Ubuntu",
