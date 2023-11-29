@@ -10,7 +10,7 @@ const Mission = () => {
 
   return (
     <Flex sx={{ width: '100vw', height: '100vh', background: '#303030' }} flexDirection="column" >
-      <Marquee isRight={false} text={"HODL --- Technically, you kinda lost your money --- Congratulations on This"} />
+      {/* <Marquee isRight={false} text={"HODL --- Technically, you kinda lost your money --- Congratulations on This"} /> */}
       <Tiles sx={{ justifyContent: 'center', alignItems: 'center', height: '100%' }} columns={[1, null, 2]}>
         {/* <Flex sx={{ height: '100%', width: '80%', margin: '0 auto', display: 'block' }}> */}
         <Flex sx={{ justifyContent: 'center', alignItems: 'center', height: "100%" }} >
@@ -30,7 +30,7 @@ const Mission = () => {
         </Flex>
         {/* </Flex> */}
       </Tiles>
-      <Marquee isRight={true} text={"I’m In It For Technology --- Ok can you guys stop trading ---  Buy Bitcoin"} />
+      {/* <Marquee isRight={true} text={"I’m In It For Technology --- Ok can you guys stop trading ---  Buy Bitcoin"} /> */}
     </Flex >
   );
 }
