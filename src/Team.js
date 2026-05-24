@@ -53,19 +53,29 @@ const Team = () => {
   const personCard = (img1, img2, name, position, github, showGithub = true) => {
     return (
       <Flex flexDirection="column"
-        borderWidth={1}
-        borderStyle='solid'
-        sx={{ alignItems: 'center', justifyContent: 'center', alignSelf: 'center' }} >
+        sx={{
+          alignItems: 'center',
+          justifyContent: 'center',
+          alignSelf: 'center',
+          padding: '20px',
+          borderRadius: '15px',
+          transition: 'all 0.3s ease',
+          '&:hover': {
+            boxShadow: '0 0 20px var(--neon-purple), inset 0 0 10px var(--neon-purple)',
+            transform: 'translateY(-5px)',
+            background: 'rgba(188, 19, 254, 0.1)'
+          }
+        }} >
         <div style={{ width: '250px', aspectRatio: '1 /1 ', position: 'relative', display: 'inline-block' }}>
           <div style={{ width: '250px', aspectRatio: '1 /1 ', position: 'relative', display: 'inline-block' }} >
             <glitch-image onMouseOver={e => (e.currentTarget.src = img2)}
               onMouseOut={e => (e.currentTarget.src = img1)}
-              style={{ borderRadius: "50%" }} src={img1} ></glitch-image>
+              style={{ borderRadius: "50%", border: "2px solid var(--neon-cyan)", boxShadow: "0 0 10px var(--neon-cyan)" }} src={img1} ></glitch-image>
           </div>
         </div>
-        <Heading color="white" fontFamily="Bungee" fontSize={[1, 3, 4]}  >{name} </Heading>
-        <Heading color="white" fontFamily="Ubuntu" fontSize={[1, 2, 3]} >{position} </Heading>
-        { showGithub? socialLink(faGithub, github) : <dev style={{height: '46.25px', width: '62px'}} />}
+        <Heading color="white" fontFamily="Bungee" mt={3} fontSize={[1, 3, 4]} sx={{ textShadow: "0 0 5px var(--neon-cyan)" }} >{name} </Heading>
+        <Heading color="var(--neon-green)" fontFamily="Ubuntu" mt={2} fontSize={[1, 2, 3]} sx={{ textShadow: "0 0 5px var(--neon-green)" }} >{position} </Heading>
+        {showGithub ? socialLink(faGithub, github) : <div style={{ height: '46.25px', width: '62px' }} />}
       </Flex >
     );
   }
@@ -77,18 +87,23 @@ const Team = () => {
         sx={{
           backgroundColor: 'transparent',
           cursor: 'pointer',
+          marginTop: '10px'
         }} >
-        <FontAwesomeIcon icon={icon} style={{ color: 'rgba(255,255,255,0.5)', fontSize: '3vmin', zIndex: 99 }} />
+        <FontAwesomeIcon icon={icon} style={{ color: 'var(--neon-pink)', fontSize: '3vmin', zIndex: 99, filter: 'drop-shadow(0 0 5px var(--neon-pink))' }} />
       </Button>
     );
   }
 
 
   return (
-    <Flex width={1} flexDirection='column' style={{ margin: '0 auto', alignItems: 'center', minHeight: '100%', marginBottom: '50px'}}>
+    <Flex width={1} flexDirection='column' style={{ margin: '0 auto', alignItems: 'center', minHeight: '100%', marginBottom: '50px' }}>
       <Text ref={h1Ref} style={{ top: 0, userSelect: 'none', cursor: 'pointer' }}
         fontFamily={'Bungee'} pt={30}
-        fontSize={[2, 4, 6]} >Our team</Text>
+        fontSize={[2, 4, 6]}
+        className="glitch-text"
+        data-text="Our Team"
+        sx={{ textShadow: '0 0 10px var(--neon-purple)', color: 'white' }}
+      >Our team</Text>
       <Flex flexDirection='column'
         sx={{
           height: '100%',
@@ -102,20 +117,10 @@ const Team = () => {
         <Text sx={{ marginY: '4vmin', alignSelf: 'center', textAlign: 'center', lineHeight: '180%' }} fontSize={[1, 2, 3]} color={'white'} fontFamily={'Ubuntu'} fontWeight={'bold'}>
           We are a creative and passionate team with strong hands-on skill.
           <br />
-          Our goal is bring more people to the <span className="half_background">crypto wonderland</span>.
+          Our goal is bring more people to the <span className="half_background" style={{ background: 'transparent', color: 'var(--neon-green)', textShadow: '0 0 5px var(--neon-green)', borderBottom: '2px solid var(--neon-green)' }}>crypto wonderland</span>.
         </Text>
-        <Tiles columns={[1, 2, 4]} sx={{ justifyItems: 'center', userSelect: 'none', marginBottom:'30px' }}>
+        <Tiles columns={[1]} sx={{ justifyItems: 'center', userSelect: 'none', marginBottom:'30px' }}>
           {personCard(avatar, avatar2, "Hao", "Founder & Developer", "https://github.com/lmcmz")}
-          {personCard(avatar3, avatar4, "Mandy", "BA & Developer", "https://github.com/meilixiaozhang")}
-          {personCard(avatar8, avatar7, "Han", "Senior Backend Developer", "https://github.com/zzggo")}
-          {personCard(avatar9, avatar10, "John", "Senior Android Developer", "https://github.com/john990")}
-        </Tiles>
-        <Tiles columns={[1, 2, 4]} sx={{ justifyItems: 'center', userSelect: 'none' }}>
-          {personCard(avatar13, avatar14, "Zayn", "UI & UX", "", false)}
-          {personCard(avatar11, avatar12, "KK", "UI & UX", "", false)}
-          {/* {personCard(avatar17, avatar18, "Unicar", "Senior Frontend Developer", "https://github.com/unicar9")} */}
-          {personCard(avatar15,avatar16, "Zena","Intern","",false)}
-          {personCard(avatar17,avatar18, "Jenny","Marketing","",false)}
         </Tiles>
       </Flex>
     </Flex>
