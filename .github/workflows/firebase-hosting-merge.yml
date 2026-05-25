@@ -21,9 +21,9 @@ jobs:
       - name: clean cache
         run: npm cache clean --force
       - name: install
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: npm install
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: build
         run: npm run build
         env:
