@@ -74,7 +74,7 @@ const Team = () => {
           </div>
         </div>
         <Heading color="white" fontFamily="Bungee" mt={3} fontSize={[1, 3, 4]} sx={{ textShadow: "0 0 5px var(--neon-cyan)" }} >{name} </Heading>
-        <Heading color="var(--neon-green)" fontFamily="Ubuntu" mt={2} fontSize={[1, 2, 3]} sx={{ textShadow: "0 0 5px var(--neon-green)" }} >{position} </Heading>
+        <Heading color="#3fff00" fontFamily="Ubuntu" mt={2} fontSize={[1, 2, 3]} sx={{ textShadow: "0 0 5px #3fff00" }} >{position} </Heading>
         {showGithub ? socialLink(faGithub, github) : <div style={{ height: '46.25px', width: '62px' }} />}
       </Flex >
     );
